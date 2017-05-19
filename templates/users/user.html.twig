@@ -1,0 +1,18 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+
+<div >
+    <hr>
+    <p>	idUser : {{ user.idUser }}</p>
+    <p>sessions : {{ user.sessions }} </p>
+    <p>date d'inscription : {{ user.dateSignIn }}</p>
+    <p>status : {{ user.status }}</p>
+    <p>Mot de passe : {{ user.password }} </p>
+    <p>Email : {{ user.email }} </p>
+    
+</div>
+
+
+
+{% endblock %}

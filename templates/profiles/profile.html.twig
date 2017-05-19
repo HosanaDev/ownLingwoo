@@ -1,0 +1,22 @@
+{% extends "layout.html.twig" %}
+
+{% block title %} {{ profile.username }} {% endblock %}
+
+{% block content %}
+
+<div >
+    <hr>
+    <p>idProfile : {{ profile.idProfile }}</p>
+    <p>idUser : {{ profile.idUser }} </p>
+    <p>username : {{ profile.username }}</p>
+    <p>gender : {{ profile.gender }}</p>
+    <p>age : {{ profile.age }} </p>
+    <p>pic : {{ profile.pic }} </p>
+    <p>bio : {{ profile.bio }} </p>
+    <p>lang : {{ profile.lang }} </p>
+    
+</div>
+
+
+
+{% endblock %}
