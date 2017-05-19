@@ -1,5 +1,8 @@
 <?php
 
+
+// ICI C'est les routes
+
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -11,8 +14,21 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 $app->get('/', function () use ($app) {
     return $app['twig']->render('index.html.twig', array());
 })
-->bind('homepage')
-;
+->bind('homepage');
+
+
+
+$app->get('/hello/{name}', 'controllers\\Home::hello');
+
+
+
+$app->get('/users', 'controllers\\Utilisateurs::allUsers');
+
+$app->get('/users/{id}', 'controllers\\Utilisateurs::find');
+
+$app->get('/profiles', 'controllers\\Profiles::allProfile');
+
+$app->get('/profiles/{id}', 'controllers\\Profile s::find');
 
 $app->error(function (\Exception $e, Request $request, $code) use ($app) {
     if ($app['debug']) {

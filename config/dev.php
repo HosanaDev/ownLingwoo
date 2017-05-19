@@ -6,6 +6,18 @@ use Silex\Provider\WebProfilerServiceProvider;
 // include the prod configuration
 require __DIR__.'/prod.php';
 
+// config db 
+$app['db.options'] = array(
+
+	'driver' => 'pdo_mysql',
+	'charset' => 'utf8',
+	'host' => 'localhost',
+	'dbname' => 'lingwoo',
+	'user' => 'root',
+	'password' => ''
+);
+
+
 // enable the debug mode
 $app['debug'] = true;
 
